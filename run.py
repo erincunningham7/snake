@@ -1,3 +1,10 @@
+def redrawWindow(surface):
+    # Fill screen with black color
+    win.fill((0, 0, 0))
+    drawGrid(surface)
+    pygame.display.update()
+
+
 # Main Func
 def main():
     width = 500
