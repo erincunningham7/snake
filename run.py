@@ -1,3 +1,11 @@
+import math
+import random
+import pygame
+import tkinter as tk
+from tkinter import messagebox
+
+
+
 def drawGrid(w, rows, surface):
     # Figure out how big each square in the grid is gonna be
     # Make sure we don't get large decimal number
@@ -15,7 +23,7 @@ def drawGrid(w, rows, surface):
 def redrawWindow(surface):
     global rows, width
     # Fill screen with black color
-    win.fill((0, 0, 0))
+    surface.fill((0, 0, 0))
     drawGrid(width, rows, surface)
     pygame.display.update()
 
@@ -27,7 +35,7 @@ def main():
     # If you want to make it harder set it to 10 there won't be enough room for the snake to move around
     rows = 20
     # Height not necessary we are just gonna draw a square
-    win = pygame.display.set_mode((width, width))
+    surface = pygame.display.set_mode((width, width))
     # Snake color and position
     s = snake((255, 0, 0), (10, 10))
     flag = True
